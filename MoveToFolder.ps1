@@ -17,7 +17,7 @@
 $SourceDir = "C:\TEMP\IMPORT"  # Directory on Server X containing files to upload
 $ProcessedDir = "C:\TEMP\IMPORT\Processed"  # Directory where processed files will be moved
 $DestinationDir = "\\127.0.0.1\EXPORT"  # Destination directory on Server Y
-$LogFile = "C:\TEMP\IMPORT\Logs\LogFile.log"  # Log file to record actions
+$LogFile = "C:\TEMP\IMPORT\Logs\LogFile_{0:yyyy-MM}.log" -f (Get-Date) # Log file to record actions
 $CleanupThresholdDays = 7  # Number of days to retain files in the ProcessedDir
 
 # Ensure the directories exist
